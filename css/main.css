@@ -1,0 +1,26 @@
+html {
+    box-sizing: border-box;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+.content {
+    display: grid;
+    margin: 0 auto;
+    background-color: white;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, minmax(100px, auto));
+    grid-gap: 10px;
+}
+
+div {
+    background-color: lightskyblue;
+}
+
+.header {
+    grid-column: 1/5;
+}
+
+.nav {
+    grid-column: 5/10;
+}
