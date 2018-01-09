@@ -4,13 +4,16 @@ html {
     max-height: 100vh;
 }
 
+body {
+    background-color: #5a08bf;
+}
+
 .content {
     display: grid;
     margin: 0 auto;
     background-color: white;
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(9, minmax(100px, auto));
-    grid-gap: 10px;
 }
 
 div {
@@ -18,9 +21,27 @@ div {
 }
 
 .header {
-    grid-column: 1/5;
+    grid-column: 1/7;
+    grid-row: 10%;
 }
 
 .nav {
-    grid-column: 5/10;
+    grid-column: 7/13;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.main {
+    grid-column: 1/13;
+    grid-row: 2/9;
+    background-image: url(../images/42.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer {
+    grid-column: 1/13;
+    grid-row: 9/10;
 }
