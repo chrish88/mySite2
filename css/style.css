@@ -1,103 +1,188 @@
-        /******* Core styles ********/
-        
-        html {
-            min-width: 100vw;
-            min-height: 100vh;
-        }
-        
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #333;
-            color: #fff;
-            font-size: 1.3em;
-            line-height: 1.5;
-            text-align: center;
-        }
-        
-        img {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-        
-        h4,
-        h6 {
-            margin: 0;
-            padding: .5em 0;
-        }
-        
-        a {
-            text-decoration: none;
-        }
-        
-        p {
-            margin: 0;
-            padding: 1em 0;
-        }
-        
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        /******* Header logo ********/
-        
-        .content {
-            display: grid;
-        }
-        
-        header {
-            letter-spacing: 1.5;
-            background: #000;
-        }
-        /******* Navigation ********/
-        
-        nav>ul {
-            letter-spacing: 1.5;
-            line-height: 3;
-            font-size: 0.75em;
-            color: #000;
-            background-color: #fff;
-            text-decoration: underline;
-            border-radius: 8px;
-        }
-        /******* Main img **********/
-        
-        .main {
-            grid-row: 3/4;
-            background: url("../img/53.JPG");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 100%;
-            min-height: calc(100vh - 101px);
-        }
-        /******* footer ********/
-        
-        footer {
-            grid-row: 4/5;
-            display: block;
-            background-color: #000;
-        }
-        
-        footer>a {
-            padding-top: 10px;
-        }
-        
-        .styles-footer {
-            margin: 0;
-            padding: 0;
-        }
-        
-        .footer-copy {
-            display: none;
-        }
-        
-        .social-icon {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            margin: 10px 5px 0;
-            background-color: white;
-            border-radius: 75%
-        }
+/***************************************** 
+                VARIABLES
+******************************************/
+
+:root {
+    --myBlack: rgb(31, 30, 30);
+    --myBlue: rgb(49, 49, 204);
+}
+
+
+/***************************************** 
+                INDEX.HTML
+******************************************/
+
+
+/******* Base styles ********/
+
+html {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #005c99;
+    color: #fff;
+    font-size: 1.3em;
+    line-height: 1.5;
+    text-align: center;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h4,
+h6 {
+    margin: 0;
+    padding: .5em 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    padding: 1em 0;
+}
+
+main-nav>ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+/******* Header logo ********/
+
+.index-content {
+    display: grid;
+}
+
+#index-header {
+    letter-spacing: 1.5;
+    background: var(--myBlack);
+}
+
+#index-h4 {
+    text-decoration: underline;
+}
+
+
+/******* Navigation ********/
+
+#index-main-nav>ul {
+    letter-spacing: 1.5;
+    line-height: 3;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-align: center;
+    color: #000;
+    background-color: #fff;
+    text-decoration: underline;
+    border-radius: 8px;
+    text-decoration: none;
+    list-style: none;
+    opacity: .5;
+    padding-left: 0;
+}
+
+
+/******* Main img **********/
+
+.index-main {
+    grid-row: 3/4;
+    background: url("../img/53.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: calc(100vh - 101px);
+}
+
+
+/******* footer ********/
+
+#index-main-footer {
+    grid-row: 4/5;
+    display: block;
+    background-color: var(--myBlack);
+}
+
+#index-main-footer>a {
+    padding-top: 10px;
+}
+
+.index-styles-footer {
+    margin: 0;
+    padding: 0;
+}
+
+.index-respon-footer-copy {
+    display: none;
+}
+
+.index-social-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 10px 5px 0;
+    background-color: white;
+    border-radius: 75%
+}
+
+
+/***************************************** 
+                BLOG.HTML
+*****************************************/
+
+#blog-grid-wrap {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    background-color: var(--myBlue);
+}
+
+#blog-main-header {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    text-align: center;
+    background: var(--myBlack);
+}
+
+#blog-nav-ul {
+    letter-spacing: 1.5;
+    line-height: 3;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-align: center;
+    background-color: #fff;
+    text-decoration: underline;
+    border-radius: 8px;
+    text-decoration: none;
+    list-style: none;
+    opacity: .5;
+    padding-left: 0;
+}
+
+#blog-nav-ul>li>a {
+    color: #000;
+}
+
+.blog-main-content {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.blog-post {
+    background-color: royalblue;
+}
+
+.blog-post-header {
+    background: var(--myBlack);
+}
