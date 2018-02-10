@@ -18,11 +18,12 @@
 /******* Base styles ********/
 
 html {
-    min-width: 100vw;
-    min-height: 100vh;
+    /* min-width: 100vw;
+    min-height: 100vh; */
 }
 
 body {
+    box-sizing: border-box;
     margin: 0;
     font-family: 'Cabin', sans-serif;
     background: var(--myWhite);
@@ -31,11 +32,9 @@ body {
     line-height: 1.5;
     text-align: center;
 }
-
 img {
     width: 100%;
 }
-
 h4,
 h6 {
     margin: 0;
@@ -55,22 +54,28 @@ p {
 
 /******* Grid Container ********/
 
-#index-wrapper {
+.index-wrapper {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-areas: 
+        "header header header"
+        " nav nav nav"
+        "image image image"
+        "footer footer footer"
+        ;
 }
+
 
 
 /******* Header ********/
 
-#index-header {
+.index-head {
     grid-area: header;
     letter-spacing: 1.5;
     color: var(--myBlack);
 }
 
-#index-h4 {
+.index-h4 {
     padding: .5em;
     font-size: 1.5em;
 }
@@ -84,12 +89,15 @@ p {
 
 /******* Navigation ********/
 
-#index-main-nav {
+.index-main-nav {
     grid-area: nav;
 }
 
-#index-main-nav>ul {
-    /* letter-spacing: 1.5;
+.index-main-nav>ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    letter-spacing: 1.5;
     line-height: 3;
     font-size: 0.75em;
     font-weight: 700;
@@ -100,24 +108,27 @@ p {
     border-radius: 8px;
     text-decoration: none;
     list-style: none;
-     opacity: .5; 
-    padding: 0;
-    margin: 0; */
+    
+    padding: 10px;
+    margin: 0;
 }
 
-.main-nav-list>a {
+/* .main-nav-list>a {
     padding: 2px 0;
     border-bottom: 2px solid var(--myBlack);
     /* border-top: 2px solid var(--myBlack); */
-}
+} */
 
 
 /******* Main img **********/
 
 .index-main {
     grid-area: image;
-    grid-row: 3/4;
+    background-image: url(../img/50.jpg);
+    background-size: cover;
+    /* grid-row: 3/4; */
     box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+    
     width: 100%;
     border-radius: 8px;
     padding: 0;
@@ -127,17 +138,17 @@ p {
 
 /******* footer ********/
 
-#index-main-footer {
+.index-main-footer {
     grid-area: footer;
-    grid-row: 4/5;
+    /* grid-row: 4/5; */
     display: block;
     background-color: var(--myBlack);
     margin: 0;
 }
 
-#index-main-footer>a {
+.index-main-footer>a {
     padding-top: 10px;
-    grid-column: 1 / -1;
+    /* grid-column: 1 / -1; */
 }
 
 .index-styles-footer {
