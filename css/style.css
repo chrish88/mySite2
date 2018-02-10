@@ -24,7 +24,7 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Cabin', sans-serif;
     background: var(--myWhite);
     color: #fff;
     font-size: 1.3em;
@@ -33,16 +33,14 @@ body {
 }
 
 img {
-    display: block;
     width: 100%;
-    height: auto;
 }
 
 h4,
 h6 {
     margin: 0;
     padding: .75em 0;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--myBlack);
 }
 
 a {
@@ -54,33 +52,44 @@ p {
     padding: 1em 0;
 }
 
-main-nav>ul {
-    list-style: none;
-    padding: 0;
-}
 
+/******* Grid Container ********/
 
-/******* Header logo ********/
-
-.index-content {
+#index-wrapper {
     display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
+
+
+/******* Header ********/
 
 #index-header {
+    grid-area: header;
     letter-spacing: 1.5;
-    background: var(--myBlack);
+    color: var(--myBlack);
 }
 
 #index-h4 {
-    padding-bottom: .5em;
+    padding: .5em;
     font-size: 1.5em;
+}
+
+.index-header-split {
+    background: var(--myBlack);
+    color: var(--myWhite);
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
 }
 
 
 /******* Navigation ********/
 
+#index-main-nav {
+    grid-area: nav;
+}
+
 #index-main-nav>ul {
-    letter-spacing: 1.5;
+    /* letter-spacing: 1.5;
     line-height: 3;
     font-size: 0.75em;
     font-weight: 700;
@@ -91,36 +100,44 @@ main-nav>ul {
     border-radius: 8px;
     text-decoration: none;
     list-style: none;
-    opacity: .5;
-    padding-left: 0;
+     opacity: .5; 
+    padding: 0;
+    margin: 0; */
+}
+
+.main-nav-list>a {
+    padding: 2px 0;
+    border-bottom: 2px solid var(--myBlack);
+    /* border-top: 2px solid var(--myBlack); */
 }
 
 
 /******* Main img **********/
 
 .index-main {
+    grid-area: image;
     grid-row: 3/4;
-    margin-bottom: 20px;
     box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
-    background: url("../img/53.JPG");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100%;
-    min-height: calc(100vh - 101px);
+    border-radius: 8px;
+    padding: 0;
+    margin: 0;
 }
 
 
 /******* footer ********/
 
 #index-main-footer {
+    grid-area: footer;
     grid-row: 4/5;
     display: block;
     background-color: var(--myBlack);
+    margin: 0;
 }
 
 #index-main-footer>a {
     padding-top: 10px;
+    grid-column: 1 / -1;
 }
 
 .index-styles-footer {
