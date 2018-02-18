@@ -163,7 +163,7 @@ a {
 
 .blog-wrapper {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 1.25rem;
     
 }
 
@@ -232,7 +232,7 @@ a {
 .blog-main-content {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auot-fit, minmax(400px 1fr));
+    grid-template-rows: repeat(auot-fit, minmax(400px 1fr));
     padding: 3.125rem;
 }
 
@@ -265,8 +265,6 @@ a {
     border-right: 2px solid gray;
     
 
-
-    
 }
 
 .article-header-h2{
@@ -279,8 +277,117 @@ a {
    
 }
 
-.article-footer{
+
+/********** footer ************/
+
+
+/***************************************** 
+                PHOTO.HTML
+*****************************************/
+
+.photo-body {
     
 }
 
-/********** footer ************/
+.photo-wrapper {
+    display: grid;
+    grid-gap: 1.25rem;
+    padding: 3.125rem;
+    margin: 5.125rem;
+    
+    background: var(--myGrey);
+    box-shadow: 2px 2px 100px #000;
+}
+
+.photo-top{ 
+    display: grid;
+}
+.photo-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-header-tag {
+    color: var(--myBlack);
+    background: var(--myYellow);
+    box-shadow: 2px 2px 10px #000;
+    align-self: center;
+    padding: 0.75rem;
+    letter-spacing: 0.30rem;
+}
+
+/******* Gallery *********/
+
+.photoGalleryWrap{
+    display: grid;
+    grid-gap: 1.25rem;
+    grid-template-columns: 1fr 3fr;
+    padding: 3.125rem;
+    background: var(--myBlack);
+    
+}
+
+.photo-genre, .image {
+    border: 1px solid var(--myYellow);
+    box-shadow: 2px 2px 10px #000;
+    padding: 3.125rem;
+}
+
+.photo-genre {
+    font-size: 1.5rem;
+    
+}
+
+.photoGenreList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+}
+
+.photoGenreList li {
+    border-top: 1px solid var(--myYellow);
+    padding-top: 4.125rem;
+    color: var(--myYellow);
+    letter-spacing: 0.5rem;
+    
+
+}
+
+.photoGenreList li:first-child{
+    border: 0;
+    padding-top: 0;
+}
+
+.image {
+    display: grid;
+    grid-gap: 3.125rem;
+    grid-template-rows: 1fr auto;
+}
+
+.img {
+    /* width: 200px;
+    height: 200px; */
+}
+
+.main-image {
+
+
+}
+
+.thumbnail-image {
+    display: grid;
+    grid-gap: 0.625rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    
+    border-top: 1px solid var(--myYellow);
+    border-bottom: 1px solid var(--myYellow);
+    
+
+}
