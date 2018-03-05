@@ -19,7 +19,7 @@
 
 /******* Base styles ********/
 
-html, 
+html,
 body {
     min-height: 100vh;
     min-width: 100vw;
@@ -27,30 +27,33 @@ body {
     padding: 0;
     margin: 0;
 }
+
 body {
-   font-size: 16px;
-   background: linear-gradient(to bottom right, var(--myBlue), var(--myGreen, #fff));
-   background-repeat: no-repeat;
-   background-size: auto 25%;
+    font-size: 16px;
+    background: linear-gradient(to bottom right, var(--myBlue), var(--myGreen, #fff));
+    background-repeat: no-repeat;
+    background-size: auto 25%;
 }
+
 img {
     width: 100%;
 }
+
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
+
 
 /******* Grid Container ********/
 
 .index-top {
-   display: grid;
-   grid-template-areas: 
-    "header header ."
-    "header header ."
+    display: grid;
+    grid-template-areas: "header header ." "header header ."
 }
 
 
 /******* Header ********/
+
 .index-header {
     grid-area: header;
     background: url(../img/chris2.jpg);
@@ -70,8 +73,8 @@ a {
     background: var(--myYellow);
     padding: 0 0.625rem;
     border-radius: 4px;
-    
 }
+
 
 /******* Navigation ********/
 
@@ -84,13 +87,13 @@ a {
     list-style: none;
 }
 
-.main-nav-ul a:hover{
+.main-nav-ul a:hover {
     background: lightyellow;
 }
 
 .main-nav-ul a {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 600;
     letter-spacing: 2px;
     text-align: center;
@@ -101,6 +104,7 @@ a {
     color: var(--myBlack);
 }
 
+
 /******* about section **********/
 
 .index-about {
@@ -109,18 +113,17 @@ a {
     padding: 3.125rem;
     margin: 1.5rem auto;
     width: 50%;
-    grid-template-columns: 500px 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(500px 1fr));
     align-items: center;
     background: var(--myWhite);
     box-shadow: 0 0 10px #000;
-    
 }
 
 .about-img {
     border-radius: 50%;
     box-shadow: 0 0 2px #000;
-
 }
+
 
 /******* footer ********/
 
@@ -163,20 +166,20 @@ a {
     background-repeat: no-repeat;
 }
 
+
 /********** Wrapper ************/
 
 .blog-wrapper {
     display: grid;
     grid-gap: 1.25rem;
-    
 }
+
 
 /********** Header ************/
 
 .blog-top {
     display: grid;
     grid-template-areas: "header header ";
-
 }
 
 .blog-header {
@@ -195,6 +198,7 @@ a {
     font-weight: bold;
     padding: 5px;
 }
+
 
 /********** Navigation ************/
 
@@ -223,7 +227,7 @@ a {
 
 /********** Main Section ************/
 
-.main-blog-wrap{
+.main-blog-wrap {
     display: grid;
     grid-gap: 5px;
     width: 60vw;
@@ -240,45 +244,36 @@ a {
     padding: 3.125rem;
 }
 
+
 /********** Blog Articles ************/
 
-.blog-div{
+.blog-div {
     border: 1px solid #000;
-    box-shadow:  2px 2px 10px #000;
+    box-shadow: 2px 2px 10px #000;
     padding: 0.625rem;
-
 }
 
 .article-post {
-    display: flex; 
-    
-    
-
+    display: flex;
 }
 
-.blog-img{
+.blog-img {
     padding: 1rem;
     width: 18.75rem;
     height: 15.63rem;
-    
-    
 }
 
-.article-header{
+.article-header {
     padding: 0.9375rem;
     border-right: 2px solid gray;
-    
-
 }
 
-.article-header-h2{
+.article-header-h2 {
     margin: 0;
 }
 
-.article-content{
-    
+.article-content {
     padding: 0.9375rem;
-   
 }
 
 
@@ -289,23 +284,20 @@ a {
                 PHOTO.HTML
 *****************************************/
 
-.photo-body {
-    
-}
+.photo-body {}
 
 .photo-wrapper {
     display: grid;
     grid-gap: 1rem;
     padding: 3.125rem;
-    
     /* background: var(--myWhite);
     box-shadow: 2px 2px 20px #000; */
 }
 
-.photo-top{ 
+.photo-top {
     display: grid;
-    
 }
+
 .photo-header {
     text-align: center;
     /* display: grid; */
@@ -315,8 +307,6 @@ a {
     background-position: center;
     padding: 1.25rem;
     margin: 1rem;
-   
-    
 }
 
 .photo-header-tag {
@@ -328,9 +318,7 @@ a {
     padding: 0.55em;
     letter-spacing: 0.30rem;
     font-size: 2.5rem;
-    
     text-shadow: -1px 0px #000;
-   
 }
 
 .photo-header-tag::before,
@@ -348,17 +336,17 @@ a {
 
 /******* Gallery *********/
 
-.photoGalleryWrap{
+.photoGalleryWrap {
     display: grid;
     grid-gap: 1.25rem;
     grid-template-columns: 1fr 3fr;
     padding: 3.125rem;
     background: var(--myBlack);
     box-shadow: 2px 2px 10px #000;
-    
 }
 
-.photo-genre, .image {
+.photo-genre,
+.image {
     border: 1px solid var(--myYellow);
     box-shadow: 0px 0px 5px var(--myYellow);
     padding: 3.125rem;
@@ -366,7 +354,6 @@ a {
 
 .photo-genre {
     font-size: 1.5rem;
-    
 }
 
 .photoGenreList {
@@ -378,7 +365,6 @@ a {
     padding: 0;
     margin: 0;
     list-style: none;
-    
 }
 
 .photoGenreList li {
@@ -387,11 +373,9 @@ a {
     margin: 3rem 0;
     color: var(--myYellow);
     letter-spacing: 5px;
-    
-
 }
 
-.photoGenreList li:first-child{
+.photoGenreList li:first-child {
     border: 0;
     padding-top: 0;
 }
@@ -411,42 +395,33 @@ a {
     height: 200px;
 }
 
-
-
-.main-img {
-    
-}
+.main-img {}
 
 .js-div {
     /* display: grid;
     grid-gap: 1.25rem; */
     padding: 0.625rem;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    
     border-top: 1px solid var(--myYellow);
     border-bottom: 1px solid var(--myYellow);
-    
-
 }
-
 
 #nightSky {
     display: none;
 }
 
-#landscapes{
+#landscapes {
     display: none;
 }
 
-#myCity{
+#myCity {
     display: none;
 }
 
-#longExposure{
+#longExposure {
     display: none;
 }
 
 .select {
     display: block;
-    
 }
