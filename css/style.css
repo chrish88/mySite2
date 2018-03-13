@@ -64,7 +64,6 @@ a {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    box-shadow: 0 0 15px #000;
     border-radius: 4px;
 }
 
@@ -126,7 +125,7 @@ a {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.658);
+    background: rgb(255, 255, 255);
     margin: 0;
     padding-left: 0;
 }
@@ -200,6 +199,44 @@ a {
 /***************************************** 
                 BLOG.HTML
 *****************************************/
+
+.index-blog-div {
+    text-align: center;
+    /* margin: 1.5rem 3.25rem; */
+}
+
+.index-blog-div h1 {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    grid-gap: 0.625rem;
+}
+
+.index-blog-div h1::before,
+.index-blog-div h1::after {
+    display: block;
+    content: '';
+    height: 0.25rem;
+    background: linear-gradient(to left, var(--myBlack), transparent);
+}
+
+.index-blog-div h1::after {
+    background: linear-gradient(to right, var(--myBlack), transparent);
+}
+
+
+/* .index-blog-div h1::before {
+    content: "";
+    height: 3px;
+    color: var(--myBlack);
+}
+
+.index-blog-div h1::after {
+    content: "";
+    height: 1px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0, var(--myBlack) 50%, rgba(0, 0, 0, 0) 100%);
+    display: block;
+} */
 
 
 /********** Base styles **********/
@@ -330,6 +367,8 @@ a {
     padding: 3.125rem;
     /* background: var(--myWhite);
     box-shadow: 2px 2px 20px #000; */
+    text-align: center;
+    background: beige;
 }
 
 .photo-top {

@@ -15,15 +15,6 @@ function stickyNavBar() {
     if (window.scrollY >= navBarTop) {
         // navBar.style.paddingTop = "40px";
         navBar.classList.add('fixed-nav');
-        //setAttribute(
-        //     "style",
-        //     "position: fixed;",
-        //     "top: 0;",
-        //     "z-index: 1;",
-        //     "display: flex;",
-        //     "flex-direction: row;",
-        //     "justify-content: space-evenly;",
-        //     "background: var(--myWhite); list-style: none;")
     } else {
         navBar.style.paddingTop = "0";
         navBar.classList.remove('fixed-nav');
