@@ -9,13 +9,16 @@
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
     <title>CH | Web Development</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display" rel="stylesheet">
 </head>
 
 <body class="index-body">
 
     <!-- grid container -->
     <div class="index-wrapper">
-        <div class="index-top">
+        <div class="index-top" id="top">
             <header class="index-header">
                 <h1 class="index-h1">Christopher Hall</h1>
                 <h2 class="index-h2">Photography &bull; Web Development</h2>
@@ -24,18 +27,18 @@
         <div>
             <nav class="index-main-nav">
                 <ul class="main-nav-ul">
-                    <li class="main-nav-list selected" id="home">
-                        <a href="index.html">Home </a>
+                    <li class="main-nav-list selected" id="">
+                        <a href="#top">Home </a>
                     </li>
 
                     <li class="main-nav-list" id="blog">
                         <a href="blog.html">Blog</a>
                     </li>
                     <li class="main-nav-list" id="dd">
-                        <a href="dd.html">Development</a>
+                        <a href="#development">Development</a>
                     </li>
                     <li class="main-nav-list" id="photo">
-                        <a href="photo.html"> Photography</a>
+                        <a href="#portfolio"> Photography</a>
                     </li>
                     <!-- <li class="main-nav-list" id="about">
                         <a href="about.html"> About </a>
@@ -44,7 +47,7 @@
             </nav>
         </div>
 
-        <section class="index-about">
+        <section class="index-about" id="home">
             <img src="../mySite2/img/snowatcharleston.jpg" alt="" class="about-img">
             <div class="about-me">
                 <h1>Welcome to my space on the web!</h1>
@@ -62,6 +65,12 @@
 
             </div>
 
+        </section>
+
+        <section id="developments">
+            <div>
+
+            </div>
         </section>
 
         <div class="photo-wrapper">
@@ -85,20 +94,20 @@
 
                     <div class="thumbnail-wrap">
                         <div id="nightSky" class="js-div">
-                            <img src="../mySite2/img/41.JPG" alt="" class="gallery-item img">
+                            <img src="../mySite2/img/41.JPG" alt="" class="galleryItem img">
                             <img src="../mySite2/img/42.JPG" alt="" class="galleryItem img">
                             <img src="../mySite2/img/46_1.jpg" alt="" class="galleryItem img">
                             <img src="../mySite2/img/48.JPG" alt="" class="galleryItem img">
                             <img src="../mySite2/img/50.jpg" alt="" class="galleryItem img">
                             <img src="../mySite2/img/61.JPG" alt="" class="galleryItem img">
                             <img src="../mySite2/img/62.JPG" alt="" class="galleryItem img">
-                            <img src="../mySite2/img/66.JPG" alt="" class="galleryItem img">
+                            <img src="../mySite2/img/66.jpg" alt="" class="galleryItem img">
                         </div>
 
                         <div id="landscapes" class="js-div">
                             <img src="../mySite2/img/51.JPG" alt="" class="galleryItem img">
                             <img src="../mySite2/img/51_1.JPG" alt="" class="galleryItem img">
-                            <img src="../mySite2/img/53.JPG" alt="" class="galleryItem img">
+                            <img src="../mySite2/img/53.jpg" alt="" class="galleryItem img">
                         </div>
 
 
