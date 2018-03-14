@@ -86,14 +86,14 @@ thumbnailWrap.addEventListener('click', (e) => {
     e.preventDefault();
     //caputres the element that triggers event and puts it in var click 
     const click = e.target;
-    //var clickCopy is defined and the value is set to click event object
-    const clickCopy = click;
-
+    
     if (click.className === 'galleryItem img') {
         img.src = click.src;
         // img.className = 'main-img';
         img.setAttribute('border', '2px solid black');
-    } else {
+    } else if(click.className !== 'gallerItem img' ){
+        // do nothing
+    }else {
         mainImage.style.display = "none";
     }
 
