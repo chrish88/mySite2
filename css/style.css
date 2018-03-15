@@ -9,6 +9,7 @@
     --myWhite: rgb(164, 193, 231);
     --myGrey: rgb(155, 155, 154);
     --myYellow: #ffdc41;
+    --myWhite2: rgb(245, 245, 245);
     
 }
 
@@ -32,6 +33,9 @@ body {
 body {
     font-size: 16px;
     font-family: 'Playfair Display', serif;
+    background: linear-gradient(#fff, transparent ),
+                linear-gradient(0deg, #fff, transparent ),
+                url(../img/BG2.jpg);
 }
 
 img {
@@ -42,6 +46,9 @@ a {
     text-decoration: none;
 }
 
+p {
+    font-size: 1.5rem;
+}
 
 /******* Grid Container ********/
 
@@ -144,8 +151,9 @@ a {
     grid-template-columns: 1fr 2fr; 
     width: auto;
     align-items: center;
-    background:  radial-gradient( #fff, transparent 120%),
-                    var(--myWhite);
+    background: var(--myWhite2);
+    margin: 3.5rem 0;
+    border-radius: 4px;
 }
 
 .about-me {
@@ -156,20 +164,21 @@ a {
 .about-me * {
     text-align: center;
     color: var(--myBlack);
+    margin: 0 0 1rem 0;
 }
 
 .about-me p {
-    font-size: 1rem;
+    font-size: 1.35rem;
     font-weight: lighter;
-    letter-spacing: 2px;
-    line-height: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 1.75rem;
 }
 
 .about-img {
     border-radius: 50%;
-    box-shadow: 0 0 2px #000;
+    box-shadow: 0 0 15px #000;
     height: auto;
-    width: 50%;
+    width: 65%;
     justify-self: end;
 }
 
@@ -203,7 +212,7 @@ a {
 
 
 /***************************************** 
-                BLOG.HTML
+                INDEX BLOG
 *****************************************/
 
 .index-blog-div {
@@ -215,7 +224,8 @@ a {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    grid-gap: 0.625rem;
+    font-size: 2.5rem;
+    grid-gap: 2.5rem;
 }
 
 .index-blog-div h1::before,
@@ -231,28 +241,26 @@ a {
 }
 
 
-/* .index-blog-div h1::before {
-    content: "";
-    height: 3px;
-    color: var(--myBlack);
-}
-
-.index-blog-div h1::after {
-    content: "";
-    height: 1px;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0, var(--myBlack) 50%, rgba(0, 0, 0, 0) 100%);
-    display: block;
-} */
-
-
-/********** Base styles **********/
-
 
 /********** Wrapper ************/
 
+
+#index-blog{
+    margin: 5rem 0;
+
+}
 .blog-wrapper {
     display: grid;
     grid-gap: 1.25rem;
+    margin: 0;
+}
+
+.inner-blog-div{
+    margin: 0 auto;
+    padding: 1rem;
+    width: 30%;
+    border: 2px solid black;
+    background: var(--myWhite2);
 }
 
 
@@ -265,19 +273,22 @@ a {
 
 .blog-header {
     grid-area: header;
-    background: url(../img/blog-my-mind.jpg);
+    background: linear-gradient(0deg, #fff, transparent 95%),  
+                url(../img/blog-my-mind.jpg);
     background-position: center;
     padding: 1.875rem;
-    min-height: 12.5rem;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+   
 }
 
 .blog-head-tag {
-    background: var(--myYellow);
+    background: rgba(230, 230, 230, 0.808);
+    font-size: 4rem;
     font-weight: bold;
-    padding: 5px;
+    padding: 0 3rem;
+    border-radius: 4px;
 }
 
 
@@ -313,9 +324,9 @@ a {
     grid-gap: 5px;
     width: 60vw;
     margin: 0 auto;
-    background: var(--myGrey);
+    background: var(-var(--myWhite2));
     color: var(--myBlack);
-    box-shadow: 2px 2px 10px #000;
+    box-shadow: 0 0 5px #000;
 }
 
 .blog-main-content {
@@ -363,8 +374,13 @@ a {
 *****************************************/
 
 #developments{
-    box-shadow: 0px -2px 10px #000;
-    margin:5rem 0;
+    box-shadow: 0px 0px5px #000;
+    margin: 5rem 0;
+    background: linear-gradient(#fff, transparent 80%),
+    linear-gradient(0deg, #fff, transparent 80%),
+    url(../img/devProjectBG.jpg);
+background-size: cover;
+background-repeat: no-repeat;
     
 }
 
@@ -372,11 +388,9 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(#fff, transparent 90%),
-                linear-gradient(0deg, #fff, transparent 90%),
-                url(../img/devProjectBG.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+
+
+
 
 }
 
@@ -386,10 +400,12 @@ a {
     height: auto;
     justify-items: center;
     grid-gap: 0.625rem;
+    background: rgba(255, 255, 255, 0.685);
 }
 
 .dev-logo-div img{
-    padding: 2rem 0;
+    margin-top: 2.4rem;
+    padding: 0.5rem 0;
     height: auto;
     width: auto;
 }
@@ -399,28 +415,38 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 450px;
-    width: 550px;
-
+    height: 25%;
+    width: 25%;
+    background: rgba(255, 255, 255, 0.548);
+    margin: 2.5rem;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #000;
+    text-align: center;
 }
 
 .dev-col a{
     text-align: center;
+    padding: 0.625rem;
+    
 }
 
 .dev-col a img{
     border: 2px solid black;
     border-radius: 3px;
+    
+    width: 100%;
 }
 
 .dev-col p{
-    padding-left: 1rem;
+    margin: 1rem;
     font-size: 1.5rem;
-    background: rgba(164, 193, 231, 0.678);
+    background: var(--myWhite2);
     border-radius: 3px;
     padding: 0.5rem 2rem;
     font-weight: 600;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    box-shadow: 0 0 2px #000;
+    
 }
 
 
@@ -438,10 +464,11 @@ a {
     padding: 3.125rem 0;
     margin: 4rem 0;
     /* background: var(--myWhite);*/
-    box-shadow: 0px -2px 10px #000;
+    
     text-align: center;
     background: linear-gradient(#fff, transparent 90%),
-                url(../img/galleryBG.jpg);
+                linear-gradient(0deg, #fff, transparent 25%),
+                url(../img/galleryBG2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
