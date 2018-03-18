@@ -32,7 +32,7 @@ body {
 
 body {
     font-size: 16px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Varela Round', sans-serif;
     background: linear-gradient(#fff, transparent ),
                 linear-gradient(0deg, #fff, transparent ),
                 url(../img/BG2.jpg);
@@ -95,6 +95,7 @@ p {
     padding-left: 0;
     margin: 0;
     background: white;
+    box-shadow: 0 0 5px #000;
 
 }
 
@@ -159,6 +160,7 @@ p {
 .about-me {
     width: 50%;
     padding-left: 3.25rem;
+    
 }
 
 .about-me * {
@@ -167,11 +169,17 @@ p {
     margin: 0 0 1rem 0;
 }
 
+.about-me h1{
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
 .about-me p {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     font-weight: lighter;
     letter-spacing: 1px;
-    line-height: 1.75rem;
+    line-height: 2rem;
 }
 
 .about-img {
@@ -185,14 +193,47 @@ p {
 
 /******* footer ********/
 
-.index-main-footer {
-    grid-area: footer;
-    background-color: var(--myBlack);
+.contact-div{
+    width: 30%;
+    color: var(--myWhite);
+    padding: 2rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 1px;
+}
+
+.contact-div h1 {
     text-align: center;
+}
+
+.contact-div h1::after{
+    content: ' ';
+    height: 2px;
+    background: var(--myWhite);
+    display: block;
+}
+.contact-div p {
+    font-family: 'Montserrat';
+    font-size: 0.75rem;
+}
+
+a[href^="mailto:"] {
+    text-decoration: underline;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    color: var(--myWhite);
+}
+
+.index-main-footer {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    background-color: var(--myBlack);
+    align-items: end;
 }
 
 .index-main-footer>a {
     padding-top: 0.625rem;
+
 }
 
 .index-styles-footer {
@@ -205,10 +246,21 @@ p {
 .index-social-icon {
     width: 1.875rem;
     height: 1.875rem;
-    margin: 0.625rem 0.3125rem 0;
+    margin: 0;
     background-color: #fff;
-    border-radius: 75%
+    border-radius: 75%;
 }
+
+footer {
+   justify-self: start;
+   text-align: center;
+   
+}
+footer a img{
+    margin: 0;
+}
+
+
 
 
 /***************************************** 
@@ -374,10 +426,9 @@ p {
 *****************************************/
 
 #developments{
-    box-shadow: 0px 0px5px #000;
-    margin: 5rem 0;
-    background: linear-gradient(#fff, transparent 80%),
-    linear-gradient(0deg, #fff, transparent 80%),
+    margin: 5rem 0 0 0;
+    background: linear-gradient(#fff, transparent 150%),
+    linear-gradient(0deg, #fff, transparent 150%),
     url(../img/devProjectBG.jpg);
 background-size: cover;
 background-repeat: no-repeat;
@@ -388,10 +439,6 @@ background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
-
-
 }
 
 .dev-logo-div{
@@ -401,10 +448,11 @@ background-repeat: no-repeat;
     justify-items: center;
     grid-gap: 0.625rem;
     background: rgba(255, 255, 255, 0.685);
+    box-shadow: 0px 0px 5px #000;
 }
 
 .dev-logo-div img{
-    margin-top: 2.4rem;
+    margin: 1rem;
     padding: 0.5rem 0;
     height: auto;
     width: auto;
@@ -461,13 +509,13 @@ background-repeat: no-repeat;
 .photo-wrapper {
     display: grid;
     grid-gap: 1rem;
-    padding: 3.125rem 0;
-    margin: 4rem 0;
+    padding: 3rem 0;
+    margin: 3rem 0 0 0;
     /* background: var(--myWhite);*/
     
     text-align: center;
     background: linear-gradient(#fff, transparent 90%),
-                linear-gradient(0deg, #fff, transparent 25%),
+                linear-gradient(0deg, var(--myBlack), transparent 35%),
                 url(../img/galleryBG2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
