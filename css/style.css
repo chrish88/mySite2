@@ -194,9 +194,10 @@ p {
 /******* footer ********/
 
 .contact-div{
+    align-items: end;
     width: 30%;
     color: var(--myWhite);
-    padding: 2rem;
+    padding: 2rem 0 0 2rem;
     font-size: 1rem;
     line-height: 1.25rem;
     letter-spacing: 1px;
@@ -218,6 +219,7 @@ p {
 }
 
 a[href^="mailto:"] {
+    
     text-decoration: underline;
     font-family: 'Montserrat';
     font-size: 1rem;
@@ -236,10 +238,10 @@ a[href^="mailto:"] {
 
 }
 
-.index-styles-footer {
+.index-footer-copy {
     margin: 0;
     padding: 0;
-    font-size: 1rem;
+    font-size: 0.75rem;
     color: var(--myWhite);
 }
 
