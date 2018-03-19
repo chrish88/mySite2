@@ -3,8 +3,8 @@
 **********************************************************************************/
 
 /* Landscape phones and down */
-@media (max-width: 767px){
-    
+@media (max-width: 768px){
+
     .index-header{
         padding: 0;
     }
@@ -110,7 +110,42 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px){
+    html,
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
 
+    .index-about{
+        display: flex;
+        flex-direction: column;
+    }
+    .about-me{
+        padding: 0;
+        /* width: 75%; */
+    }
+
+    .dev-col{
+        /* width: auto; */
+    }
+
+    .index-main-footer{
+        grid-template-columns: 1fr;
+    }
+
+    .contact-div{
+        width: 100%;
+        padding: 0;
+        margin: 1rem 0;
+    }
+
+    .contact-div p{
+        margin: 0 1rem;
+        text-align: center;
+    }
+    footer{
+        justify-self: center;
+    }
 }
 
 
