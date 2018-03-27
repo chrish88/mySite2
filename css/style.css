@@ -37,6 +37,8 @@ body {
     background: linear-gradient(#fff, transparent ),
                 linear-gradient(0deg, #fff, transparent ),
                 url(../img/BG2.jpg);
+    background-position: center;
+    
 }
 
 img {
@@ -66,26 +68,27 @@ p {
 
 .index-header {
     grid-area: header;
+    display: flex;
+    flex-direction: column;
     background:
         linear-gradient(#fff, transparent 20%),
         linear-gradient( 0deg,#fff, transparent 50%), 
         url(../img/chris2.jpg) no-repeat center;
+    background-size: cover;
     background-attachment: fixed;
     min-height: 31.25rem;
-    background-size: cover;
     padding: 3.125rem;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
     border-radius: 4px;
+    justify-content: center;
 }
 
 .index-header>* {
     background: var(--myWhite);
     padding: 0 2rem;
     border-radius: 4px;
+    align-self: flex-start;
+    
 }
 
 
@@ -226,9 +229,9 @@ footer a img{
                 INDEX BLOG
 *****************************************/
 
-.index-blog-div {
+/* .index-blog-div {
     text-align: center;
-    /* margin: 1.5rem 3.25rem; */
+    
 }
 
 .index-blog-div h1 {
@@ -249,14 +252,14 @@ footer a img{
 
 .index-blog-div h1::after {
     background: linear-gradient(to right, var(--myBlack), transparent);
-}
+} */
 
 
 
 /********** Wrapper ************/
 
 
-#index-blog{
+/* #index-blog{
     margin: 5rem 0;
 
 }
@@ -272,12 +275,12 @@ footer a img{
     width: 30%;
     border: 2px solid black;
     background: var(--myWhite2);
-}
+} */
 
 
 /********** Header ************/
 
-.blog-top {
+/* .blog-top {
     display: grid;
     grid-template-areas: "header header ";
 }
@@ -300,12 +303,12 @@ footer a img{
     font-weight: bold;
     padding: 0 3rem;
     border-radius: 4px;
-}
+} */
 
 
 /********** Navigation ************/
 
-.blog-nav-ul {
+/* .blog-nav-ul {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -325,12 +328,12 @@ footer a img{
     border-radius: 4px;
     box-shadow: 2px 2px 10px #000;
     color: var(--myBlack);
-}
+} */
 
 
 /********** Main Section ************/
 
-.main-blog-wrap {
+/* .main-blog-wrap {
     display: grid;
     grid-gap: 5px;
     width: 60vw;
@@ -345,12 +348,12 @@ footer a img{
     grid-gap: 10px;
     grid-template-rows: repeat(auot-fit, minmax(400px 1fr));
     padding: 3.125rem;
-}
+} */
 
 
 /********** Blog Articles ************/
 
-.blog-div {
+/* .blog-div {
     border: 1px solid #000;
     box-shadow: 2px 2px 10px #000;
     padding: 0.625rem;
@@ -377,7 +380,7 @@ footer a img{
 
 .article-content {
     padding: 0.9375rem;
-}
+} */
 
 
 /***************************************** 
@@ -442,6 +445,11 @@ background-repeat: no-repeat;
     border-radius: 3px;
     
     width: 100%;
+}
+
+.dev-col h4 {
+    margin: 0; 
+    font-size: 2rem;
 }
 
 .dev-col p{
@@ -626,15 +634,27 @@ background-repeat: no-repeat;
     html,
     body{
         width: 100vw;
-        height: 100vh;
+        height: 100vh;;
     }
     .index-header{
         padding: 0;
+        background:
+        linear-gradient(#fff, transparent 20%),
+        linear-gradient( 0deg,#fff, transparent 50%), 
+        url(../img/chris2.jpg) no-repeat center;
+        background-size:cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        justify-content: flex-start;
+        
     }
+
     .index-header *{
-        margin: 1rem auto;
+        align-self: center;
     }
     .index-header h2{
+        margin: 0;
         padding: 0 1rem;
         text-align: center;
         width: 70%;
@@ -649,7 +669,7 @@ background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
         padding: 1rem;
-        width: 100%;
+        
     }
     .about-me h1{
         padding: 0;
@@ -657,6 +677,7 @@ background-repeat: no-repeat;
     }
     .about-me p{
         font-size: 1.2rem;
+        line-height: 1.75rem;
     }
 
     .main-nav-ul{
@@ -710,7 +731,7 @@ background-repeat: no-repeat;
     }
 
     .js-div{
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
 
     .index-main-footer{
@@ -769,6 +790,10 @@ background-repeat: no-repeat;
         padding: 0;
     }
 
+    .image-wrap{
+        width: 100%;
+    }
+
     .main-image {
         grid-row: 2/3;
     }
@@ -785,7 +810,7 @@ background-repeat: no-repeat;
     }
 
     .js-div{
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
 
     .contact-div {
