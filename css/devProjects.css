@@ -1,0 +1,88 @@
+/***************************************** 
+                VARIABLES
+******************************************/
+:root{
+
+    --myBlack: rgb(31, 30, 30);
+    --myBlue: #0b79c2;
+    --myGreen: rgb(10, 194, 10);
+    --myWhite: rgb(164, 193, 231);
+    --myGrey: rgb(155, 155, 154);
+    --myYellow: #ffdc41;
+    --myWhite2: rgb(245, 245, 245);
+}
+
+/***************************************** 
+                Base
+******************************************/
+html{
+    width: 100vw;
+    height: 100vh;
+}
+
+/***************************************** 
+                styles
+******************************************/
+
+body {
+    display: flex;
+    letter-spacing: 1px;
+    background: url("https://www.walldevil.com/snowy-mountains-wallpaper-316946/");
+    justify-content: center;
+  }
+  #container {
+    display: flex;
+    justify-content: center;
+    background-color: #ddd;
+    width: 25%;
+    border: 1px solid darkgrey;
+    border-radius: 8px;
+    align-items: flex-start;
+  }
+  
+  h1 {
+    padding: 15px;
+    margin-bottom: 1px;
+    font-family: courier;
+  }
+  
+  label {
+    display: block;
+    padding-top: 15px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+    left: -70px;
+    font-weight: 500;
+    max-width: 25%;
+  }
+  
+  input {
+    display: block;
+    margin: 8px auto;
+    padding: 5px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+  }
+  
+  input:hover {
+    background: darkgrey;
+  }
+  
+  label:hover{
+    font-size: 18px;
+  }
+  
+  button {
+    flex-grow: 2;
+    font-size: 20px;
+    margin: 30px;
+    padding: 10px;
+    width: 80%;
+    background-color: whitesmoke;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+  }
+  
+  
+  
