@@ -3,12 +3,6 @@ const navBar = document.querySelector('.main-nav-ul');
 //establish how far down the page the nav bar starts
 const navBarTop = navBar.offsetTop;
 
-// function stickyNavigation() {
-//     console.log('navBarTop = ' + navBarTop);
-//     console.log('scrollY = ' + window.scrollY);
-// }
-
-// window.addEventListener('scroll', stickyNavigation);
 
 function stickyNavBar() {
     //apply fixed position to nav bar without overwritting css rules

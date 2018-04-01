@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/devProjects.css">
+    <title>Widgets</title>
+</head>
+<body>
+    <!-- form section -->
+    <div id="main-form-div">
+        <div id="signup-form-container">
+            <form action="" method="" class="sign-up">
+                <h1>Sign Up</h1>
+                
+                <feildset class="first-feild">
+                <label for="name">Name</label>
+                <input type="text" class="signup-input" name="first-name" placeholder="First Name">
+                <input type="text" class="signup-input" name="last_name" placeholder="Last Name">
+
+                <label for="name">User Name</label>
+                <input type="text" id="userName" class="signup-input" name="user_name" placeholder="User Name">
+                
+                <label for="email">Email</label>
+                <input type="mail" id="email" class="signup-input" name="user_email" placeholder="E-mail">
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" class="signup-input" name="user_password" placeholder="Password">
+                </feildset>
+                
+                <button type="submit" class="btn first-btn">Submit</button>
+                
+            </form>
+        </div>
+    
+
+    
+        <div id="login-form-container">
+            <form action="" method="" class="log-in">
+                <h1>Log In</h1>
+                
+                <feildset class="second-feild">
+
+                <label for="name">User Name</label>
+                <input type="text" id="userName" class="login-input" name="user_name" placeholder="User Name">
+                
+                <label for="email">Email</label>
+                <input type="mail" id="email" class="login-input" name="user_email" placeholder="E-mail">
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" class="login-input" name="user_password" placeholder="Password">
+                </feildset>
+                
+                <button type="submit" class="btn second-btn">Submit</button>
+                
+            </form>
+        </div>
+    </div>
+    <!-- End of form section -->
+
+    <!-- flickr photo section -->
+    <div class="grid-container">
+
+        <div class="top">
+        <h1>Flickr Photo Search</h1>
+        <form class="flickr-form">
+            <label for="search" class="flickr-label">Type a search term</label>
+            <input type="search" name="search" id="flickr-search" class="flickr-input">
+            <input type="submit" value="Search" id="flickr-submit" class="flickr-input">
+        </form>
+        
+        </div>
+    
+
+        <div class="bottom">
+            <ul id="photos">
+
+            </ul>
+        </div>  <!-- End of flickr phto section -->
+        
+        <!-- widget section -->
+        <div id="weather-widget-div">
+            <div class="weather inner-widget">
+                <p><span id="temp"></span></p>
+                <p><span id="wind"></span></p>
+                <p><span id="rain"></span></p>
+                <p><span id="humid"></span></p>
+            </div>
+        </div>
+    </div><!-- End of widget section -->
+
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+</script>
+<script src="../mySite2/js/devProjects.js"></script>
+</html>

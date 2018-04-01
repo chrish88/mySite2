@@ -20,69 +20,164 @@ html{
     height: 100vh;
 }
 
+body{
+    background: #edeff0;
+}
+
 /***************************************** 
-                styles
+                LOG IN FORM
 ******************************************/
 
-body {
+#main-form-div{
+    display: grid;
+    grid-gap: 0.625rem;
+    grid-template-columns: repeat(3, 1fr);
+    background: url(../img/snowy_mountains.jpg) center no-repeat;
+    background-size: cover;
+}
+
+#login-form-container{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    color: whitesmoke;
+    padding: 3.65rem 0;
+    margin: 3.65rem;
+    border-radius: 20px;
+    height: 450px;
+    font-family: monospace;
+}
+
+.log-in{
+    background: rgba(3, 67, 139, 0.801);
+    height: 450px;
+    border-radius: 5px;
+    border-top: 5px solid rgb(112, 112, 168);
+}
+
+.log-in h1{
+    font-size: 1.75rem;
+    margin: 0 0 1.25rem 0;
+    padding: 0 1.25rem;
+    border-radius: 0 0 4px 4px;
+    background: rgb(112, 112, 168);
+    align-self: center;
+    letter-spacing: 2px;
+
+}
+
+.second-feild{
     display: flex;
-    letter-spacing: 1px;
-    background: url("https://www.walldevil.com/snowy-mountains-wallpaper-316946/");
-    justify-content: center;
-  }
-  #container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.second-feild label{
+    font-size: 1rem;
+    
+}
+
+.second-btn{
+    margin-top: 2rem;
+    align-self: center;
+}
+
+/***************************************** 
+                SIGN UP FORM
+******************************************/
+
+#signup-form-container{
+    grid-column: 2/3;  
+    background: rgba(243, 241, 241, 0.801); 
+    padding: 3.65rem 0;
+    margin: 3.65rem;
+    border-radius: 20px;
+}
+
+form {
     display: flex;
-    justify-content: center;
-    background-color: #ddd;
-    width: 25%;
-    border: 1px solid darkgrey;
-    border-radius: 8px;
-    align-items: flex-start;
-  }
-  
-  h1 {
-    padding: 15px;
-    margin-bottom: 1px;
-    font-family: courier;
-  }
-  
-  label {
+    flex-direction: column;
+    height: 650px;
+}
+
+form h1{
+    text-align: center;
+    font-size: 2.75rem;
+    letter-spacing: 5px;
+}
+
+.first-feild{
+    align-self: center;
+    padding: 3.25rem 3.25rem 0;
+}
+
+label{
+    font-size: 1rem;
+    letter-spacing: 3px;
+    font-weight: 800;
+}
+
+
+.login-input,
+.signup-input {
     display: block;
-    padding-top: 15px;
-    margin: 0 auto;
-    text-align: left;
-    position: relative;
-    left: -70px;
+    padding: 0.625rem;
+    margin-bottom: 2.625rem;
+    border: 1px solid rgb(187, 184, 184);
+}
+
+input[placeholder='First Name']{
+    margin-bottom: 0.625rem;
+}
+
+.first-btn{
+    align-self: center;
+}
+
+#password{
+    margin-bottom: 2rem;
+}
+
+button {
+    padding: 0.5rem 4.625rem;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    
+}
+
+/***************************************** 
+            Flickr Photos
+******************************************/
+.grid-container{
+    display: grid;
+    grid-gap: 0.625rem;
+
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 3rem;
+    margin: 3rem;
+    height: 250px;
+    background: white;
+    border-radius: 5px;
+}
+
+.top h1{
+    font-size: 1.75rem;
     font-weight: 500;
-    max-width: 25%;
-  }
-  
-  input {
-    display: block;
-    margin: 8px auto;
-    padding: 5px;
-    background-color: whitesmoke;
-    border-radius: 5px;
-  }
-  
-  input:hover {
-    background: darkgrey;
-  }
-  
-  label:hover{
-    font-size: 18px;
-  }
-  
-  button {
-    flex-grow: 2;
-    font-size: 20px;
-    margin: 30px;
-    padding: 10px;
-    width: 80%;
-    background-color: whitesmoke;
-    border: 1px solid darkgrey;
-    border-radius: 5px;
-  }
-  
-  
-  
+}
+
+.flickr-form{
+    display: flex;
+    flex-direction: row;
+    height: 2rem;
+}
+
+.flickr-label{
+    font-weight: 100;
+    padding-right: 1rem;
+    letter-spacing: 1px;
+}
+
