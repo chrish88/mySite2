@@ -24,22 +24,82 @@ body{
     background: #edeff0;
 }
 
+/******* Navigation ********/
+
+.main-nav-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    background: white;
+    box-shadow: 0 0 5px #000;
+
+}
+
+.main-nav-ul a {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 0.625rem;
+    border-radius: 4px;
+    color: var(--myBlack);
+}
+
+.main-nav-ul a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--myBlack);
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.main-nav-ul a:hover:after {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+
+
+/* js added class */
+
+.fixed-nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(255, 255, 255);
+    margin: 0;
+    padding-left:0;
+}
+
+
 /***************************************** 
                 LOG IN FORM
 ******************************************/
 
 #main-form-div{
-    background: url(../img/snowy_mountains.jpg) center no-repeat;
-    background-size: cover;
-    height: 1160px;
+    display: grid;
 }
 
 #login-form-container{
+    grid-column: 1/2;
+    grid-row: 1/2;
     color: whitesmoke;
     padding: 0;
     margin: 1rem;
     border-radius: 20px;
-    height: 400px;
+    height: auto;
     font-family: monospace;
 }
 
@@ -168,14 +228,18 @@ button {
 #flickr-form{
     display: flex;
     flex-direction: column;
-    height: 2rem;
+    
 }
 
 #flickr-form input{
     margin: 1rem 0;
     border: 1px solid rgb(212, 209, 209);
     border-radius: 5px;
+    padding: 1rem;
+    font-size: 1.1rem;
 }
+
+
 
 .flickr-label{
     align-self: center;
@@ -185,11 +249,11 @@ button {
 
 #photos{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     grid-gap: 5px;
     padding: 0;
-    margin: 0;
+    margin: 1rem auto;
+    width: 75%;
 
 }
 
@@ -210,6 +274,11 @@ button {
 /***************************************** 
             Media Queries
 ******************************************/
+@media (min-width: 550px){
+    #photos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
 /* Landscape phones and up */
 @media (min-width: 768px){
 
@@ -219,21 +288,14 @@ button {
 
     #main-form-div{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        background: url(../img/snowy_mountains.jpg) center no-repeat;
-        background-size: cover;
+        height: auto;
+        justify-content: center;
     }
 
     #login-form-container{
         display: grid;
         color: whitesmoke;
-        padding: 3.65rem 0;
-        margin: 3.65rem;
-        border-radius: 20px;
-        height: 450px;
-        font-family: monospace;
-        grid-column: 1/2;
-        grid-row: 1/2;
+        padding: 3.65rem 1rem;
         justify-items: center;
     }
 
@@ -241,8 +303,6 @@ button {
         background: rgba(3, 67, 139, 0.801);
         height: 450px;
         width: 500px;
-        border-radius: 5px;
-        border-top: 5px solid rgb(112, 112, 168);
     }
 
     .log-in h1{
@@ -277,13 +337,13 @@ button {
     ******************************************/
 
     #signup-form-container{
-        grid-column: 2/3;  
+        grid-column: 1/2;  
         background: rgba(243, 241, 241, 0.801); 
-        padding: 3.65rem 0;
-        margin: 3.65rem;
         border-radius: 20px;
         width: 500px;
         height: 650px;
+        padding: 3.65rem 0;
+        margin: 3.65rem;
     }
 
     form {
@@ -384,9 +444,6 @@ button {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         grid-template-rows: repeat(3, 1fr);
         grid-gap: 5px;
-        padding: 0;
-        margin: 0;
-
     }
 
     .flickr-thumbnail{
@@ -402,4 +459,14 @@ button {
         height: 100%;
     }
 
+}
+
+@media (min-width: 1024px){
+    #main-form-div{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #signup-form-container{
+        grid-column: 2/3;
+    }
 }

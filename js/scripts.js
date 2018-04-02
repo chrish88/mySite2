@@ -35,6 +35,34 @@ $(document).ready(function() {
     });
 });
 
+
+//***************flickr photo**************//
+
+$('#flickr-form').submit(function(e){
+    e.preventDefault();
+    const flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+    let $searchInput = $('#flickr-search').val();
+    let searchData = {
+        tags: $searchInput,
+        format: "json"
+    };
+
+    function displayPhotos(data){
+        photoHTML = '<ul id="photos">';
+        $.each(data.items, function(i, photo){
+            photoHTML += '<li class="flickr-thumbnail">';
+            photoHTML += '<a href="' + photo.link + '">';
+            photoHTML += '<img src="' + photo.media.m + '"></a></li>'
+        });
+        photoHTML += '</ul>';
+        $('.bottom').html(photoHTML);
+    }
+    $.getJSON(flickrAPI, searchData, displayPhotos);
+});
+
+
+
+
 //--------------Portfolio Image Display------------------//
 // capturs photo genre ul
 const ul = document.querySelector('.photoGenreList');

@@ -243,9 +243,74 @@ background-repeat: no-repeat;
     font-weight: 600;
     letter-spacing: 2px;
     box-shadow: 0 0 2px #000;
+}
+
+/***************************************** 
+                Flickr Photos
+******************************************/
+.grid-container{
+    display: grid;
+    grid-gap: 0.625rem;
+
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 3rem;
+    height: 250px;
+    background: white;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.top h1{
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+#flickr-form{
+    display: flex;
+    flex-direction: row;
+    height: 2rem;
+    padding: 0.625rem;
+}
+
+#flickr-form input{
+    margin: 0;
+}
+
+.flickr-label{
+    font-weight: 100;
+    padding-right: 1rem;
+    letter-spacing: 1px;
     
 }
 
+#photos{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 5px;
+    padding: 1rem;
+}
+
+.flickr-thumbnail{
+    list-style: none;
+    width: 100%;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#photos img{
+    width: 100%;
+    height: 100%;
+}
+
+}
 
 
 
