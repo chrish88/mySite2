@@ -29,21 +29,17 @@ body{
 ******************************************/
 
 #main-form-div{
-    display: grid;
-    grid-gap: 0.625rem;
-    grid-template-columns: repeat(3, 1fr);
     background: url(../img/snowy_mountains.jpg) center no-repeat;
     background-size: cover;
+    height: 1160px;
 }
 
 #login-form-container{
-    grid-column: 1/2;
-    grid-row: 1/2;
     color: whitesmoke;
-    padding: 3.65rem 0;
-    margin: 3.65rem;
+    padding: 0;
+    margin: 1rem;
     border-radius: 20px;
-    height: 450px;
+    height: 400px;
     font-family: monospace;
 }
 
@@ -86,10 +82,9 @@ body{
 ******************************************/
 
 #signup-form-container{
-    grid-column: 2/3;  
     background: rgba(243, 241, 241, 0.801); 
-    padding: 3.65rem 0;
-    margin: 3.65rem;
+    padding:  0;
+    margin: 1rem;
     border-radius: 20px;
 }
 
@@ -107,7 +102,7 @@ form h1{
 
 .first-feild{
     align-self: center;
-    padding: 3.25rem 3.25rem 0;
+    padding: 0;
 }
 
 label{
@@ -156,9 +151,9 @@ button {
 .top{
     display: flex;
     flex-direction: column;
-    align-items: start;
-    padding-left: 3rem;
-    margin: 3rem;
+    align-items: center;
+    padding: 0;
+    margin: 0.75rem;
     height: 250px;
     background: white;
     border-radius: 5px;
@@ -167,17 +162,244 @@ button {
 .top h1{
     font-size: 1.75rem;
     font-weight: 500;
+    text-align: center;
 }
 
-.flickr-form{
+#flickr-form{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 2rem;
 }
 
+#flickr-form input{
+    margin: 1rem 0;
+    border: 1px solid rgb(212, 209, 209);
+    border-radius: 5px;
+}
+
 .flickr-label{
+    align-self: center;
     font-weight: 100;
-    padding-right: 1rem;
     letter-spacing: 1px;
 }
 
+#photos{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 5px;
+    padding: 0;
+    margin: 0;
+
+}
+
+.flickr-thumbnail{
+    list-style: none;
+    width: 100%;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#photos img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/***************************************** 
+            Media Queries
+******************************************/
+/* Landscape phones and up */
+@media (min-width: 768px){
+
+/***************************************** 
+                LOG IN FORM
+******************************************/
+
+    #main-form-div{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background: url(../img/snowy_mountains.jpg) center no-repeat;
+        background-size: cover;
+    }
+
+    #login-form-container{
+        display: grid;
+        color: whitesmoke;
+        padding: 3.65rem 0;
+        margin: 3.65rem;
+        border-radius: 20px;
+        height: 450px;
+        font-family: monospace;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        justify-items: center;
+    }
+
+    .log-in{
+        background: rgba(3, 67, 139, 0.801);
+        height: 450px;
+        width: 500px;
+        border-radius: 5px;
+        border-top: 5px solid rgb(112, 112, 168);
+    }
+
+    .log-in h1{
+        font-size: 1.75rem;
+        margin: 0 0 1.25rem 0;
+        padding: 0 1.25rem;
+        border-radius: 0 0 4px 4px;
+        background: rgb(112, 112, 168);
+        align-self: center;
+        letter-spacing: 2px;
+
+    }
+
+    .second-feild{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .second-feild label{
+        font-size: 1rem;
+        
+    }
+
+    .second-btn{
+        margin-top: 2rem;
+        align-self: center;
+    }
+
+    /***************************************** 
+                    SIGN UP FORM
+    ******************************************/
+
+    #signup-form-container{
+        grid-column: 2/3;  
+        background: rgba(243, 241, 241, 0.801); 
+        padding: 3.65rem 0;
+        margin: 3.65rem;
+        border-radius: 20px;
+        width: 500px;
+        height: 650px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    form h1{
+        text-align: center;
+        font-size: 2.75rem;
+        letter-spacing: 5px;
+    }
+
+    .first-feild{
+        align-self: center;
+        padding: 3.25rem 3.25rem 0;
+    }
+
+    label{
+        font-size: 1rem;
+        letter-spacing: 3px;
+        font-weight: 800;
+    }
+
+
+    .login-input,
+    .signup-input {
+        display: block;
+        padding: 0.625rem;
+        margin-bottom: 2.625rem;
+        border: 1px solid rgb(187, 184, 184);
+    }
+
+    input[placeholder='First Name']{
+        margin-bottom: 0.625rem;
+    }
+
+    .first-btn{
+        align-self: center;
+    }
+
+    #password{
+        margin-bottom: 2rem;
+    }
+
+    button {
+        padding: 0.5rem 4.625rem;
+        font-size: 1rem;
+        letter-spacing: 2px;
+        
+    }
+
+    /***************************************** 
+                Flickr Photos
+    ******************************************/
+    .grid-container{
+        display: grid;
+        grid-gap: 0.625rem;
+
+    }
+
+    .top{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-left: 3rem;
+        margin: 3rem;
+        height: 250px;
+        background: white;
+        border-radius: 5px;
+    }
+
+    .top h1{
+        font-size: 1.75rem;
+        font-weight: 500;
+    }
+
+    #flickr-form{
+        display: flex;
+        flex-direction: row;
+        height: 2rem;
+    }
+
+    #flickr-form input{
+        margin: 0;
+    }
+
+    .flickr-label{
+        font-weight: 100;
+        padding-right: 1rem;
+        letter-spacing: 1px;
+        
+    }
+
+    #photos{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 5px;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .flickr-thumbnail{
+        list-style: none;
+        width: 100%;
+        height: 200px;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+
+    #photos img{
+        width: 100%;
+        height: 100%;
+    }
+
+}
