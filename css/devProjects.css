@@ -270,6 +270,89 @@ button {
     height: 100%;
 }
 
+/***************************************** 
+                weather widget
+******************************************/
+
+    #weather-main-div{
+        display: grid;
+    }
+
+    #weather-inner-div{
+        display: grid;
+    
+    }
+
+    #info{
+        display: flex;
+        flex-direction: column;
+    }
+    #locTime{
+        font-size: 1.25rem;
+        justify-self: center;
+        text-align: center;
+    }
+
+    #location{
+        grid-column: 1/2
+    }
+    #timeDate{
+        grid-column: 1/2
+    }
+
+    #temp{
+        padding: 1rem;
+        font-size: 2rem;
+        justify-self: center;
+    }
+    #second-inner-div{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        line-height: 1.75rem;
+    }
+
+    #days{
+        display: grid;
+        padding-left: 0.625rem;
+    }
+
+
+/*media query
+ #weather-main-div{
+        display: grid;
+        grid-template-columns: 2fr 1.25fr;
+        width: 75%;
+        height: auto;
+    }
+
+    .weather-inner-div{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    
+    }
+
+    #info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .location{
+        grid-column: 1/2
+    }
+    .timeDate{
+        grid-column: 1/2
+    }
+
+    .temp{
+        grid-column: 4/5;
+        padding: 1rem;
+    }
+*/
+    
+
+
+
 
 /***************************************** 
             Media Queries

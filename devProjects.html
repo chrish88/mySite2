@@ -98,15 +98,58 @@
         </div>  <!-- End of flickr phto section -->
         
         <!-- widget section -->
-        <div id="weather-widget-div">
-            <div class="weather inner-widget">
-                <p><span id="temp"></span></p>
-                <p><span id="wind"></span></p>
-                <p><span id="rain"></span></p>
-                <p><span id="humid"></span></p>
+        <div id="weather-main-div">
+            <div id="weather-inner-div">
+                <p id="locTime">
+                    <span id="location">Mt. Charleston</span><br>
+                    <span id="timeDate"></span>
+                </p>
+                <p id="temp">
+                    <span id="temp-span">&deg;</span>
+                </p>
+                <div id="second-inner-div">
+                    <p id"wind"> Wind:<br>
+                        <span id="wind-span"></span>
+                        <span id="wind-direc"></span>
+                    </p>
+                    <!-- <p id="wind-direct"> Wind:<br>
+                        <span id="wind-direct-span"></span>
+                    </p> -->
+                    <p id="precip">Precip Rate:<br>
+                        <span id="precip-span"></span>
+                    </p>
+                    <p id="humid">Humidity:<br>
+                        <span id="humid-span"></span>
+                    </p>
+                </div>
             </div>
-        </div>
-    </div><!-- End of widget section -->
+            <div id="hourly">
+
+            </div>
+            <div id="days">
+                <p>Sunday
+                    <span class="sun"></span>
+                </p>
+                <p>Monday
+                    <span class="mon"></span>
+                </p>
+                <p>Tuesday
+                    <span class="tue"></span>
+                </p>
+                <p>Wednesday
+                    <span class="wed"></span>
+                </p>
+                <p>Thursday
+                    <span class="thur"></span>
+                </p>
+                <p>Friday
+                    <span class="fri"></span>
+                </p>
+                <p>Saturday
+                    <span class="sat"></span>
+                </p>
+            </div>
+        </div><!-- End of widget section -->
 
     
 </body>
